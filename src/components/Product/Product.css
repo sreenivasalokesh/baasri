@@ -1,179 +1,189 @@
-
 /* styles.css */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Product List Grid */
-  .product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 40px 120px;
-  }
-  
-  .product-card {
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    text-decoration: none;
-    color: black;
-  }
-  
-  .product-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .product-image {
-    width: 100%;
-    height: 400px;
-    object-fit: contain;
-    border-radius: 8px;
-  }
-  
-  .product-name {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0;
-  }
-  
-  .product-code {
-    color: gray;
-  }
-  
-  /* Product Detail Page */
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
 
-  .product-detail {
-    background: #f4f4f4;
+/* Product List Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px 10%;
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  text-decoration: none;
+  color: black;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.product-code {
+  color: gray;
+}
+
+/* Product Detail Page */
+.product-detail {
+  background: #f4f4f4;
+}
+
+.product-detail-container {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 5%;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+  background-color: white;
+}
+
+.product-description {
+  padding: 0px 10px;
+}
+
+.product-description .title {
+  font-weight: 600;
+  font-size: 26px;
+  margin: 0px;
+}
+
+.product-description .sku-code {
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 1.6rem;
+  margin: 14px 0px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.product-description-item-width {
+  display: inline-block;
+  width: 100%;
+  max-width: 200px;
+}
+
+.faded-font {
+  color: #555555;
+}
+
+.grey-divider {
+  border: none;
+  height: 0.5px;
+  background-color: grey;
+  margin: 20px 0;
+}
+
+.thumbnail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.thumbnail.selected {
+  border-color: blue;
+}
+
+.large-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  color: blue;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .product-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      padding: 20px 5%;
   }
 
   .product-detail-container {
-    display: flex;
-    margin: 40px 120px;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    gap: 20px;
-    align-items: flex-start;
-    background-color: white;
+      flex-direction: column;
+      margin: 20px 5%;
   }
 
-  .product-description{
-    padding: 0px 20px;
-  }
-
-  .product-description .title{
-    font-weight: 600;
-    font-size: 26px;
-    padding: 0px;
-    margin: 0px;
-  }
-
-  .product-description .sku-code{
-    font-weight: 100;
-    font-size: 14px;
-    line-height: 1.6rem;
-    margin: 14px 0px;
-  }
-
-  .product-description .h2{
-    font-weight: 200;
-    font-size: 18px;
-    line-height: 1.6rem;
-    margin: 14px 0px;
-  }
-
-  .bold{
-    font-weight: 600;
-  }
-
-  .product-description-item-width{
-    display: inline-block;
-    width: 200px;
-  }
-  .tabs-3{
-    padding: 0px;
-  }
-
-  .faded-font{
-    color: #555555;
-  }
-
-  .grey-divider {
-    border: none;
-    height: 0.5px;
-    background-color: grey;
-    margin: 20px 0;
-  }
-  
-  .thumbnail-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .thumbnail {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 5px;
-    cursor: pointer;
-    border: 2px solid transparent;
-  }
-  
-  .thumbnail.selected {
-    border-color: blue;
-  }
-  
   .large-image {
-    width: 500px;
-    height: 700px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      max-width: 100%;
   }
-  
-  .back-button {
-    display: inline-block;
-    margin-top: 20px;
-    color: blue;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
+}
 
-  .Demo__container {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fill, 30px);
-    max-width: 400px;
-    margin: 0 auto;
+@media (max-width: 768px) {
+  .product-grid {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
-  
-  .Demo__some-network {
-    text-align: center;
+
+  .product-detail-container {
+      padding: 20px;
   }
-  
-  .Demo__some-network__share-count {
-    display: inline-flex;
-    justify-content: center;
-    white-space: nowrap;
-    overflow: visible;
-    width: 0;
-    font-size: 14px;
+
+  .large-image {
+      height: auto;
   }
-  
-  .Demo__some-network__share-button {
-    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      padding: 15px;
   }
-  
-  .Demo__some-network__share-button:hover:not(:active) {
-    opacity: 0.75;
+
+  .product-detail-container {
+      margin: 10px 2%;
+      padding: 15px;
   }
-  
+
+  .product-description .title {
+      font-size: 22px;
+  }
+
+  .large-image {
+      height: auto;
+  }
+}
