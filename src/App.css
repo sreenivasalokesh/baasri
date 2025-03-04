@@ -1,0 +1,187 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content:  space-around; 
+  gap: 200 px;
+  align-items: center;
+  padding: 20px 0px;
+  background-color: #fff;
+  color: #333;
+}
+
+.navbar .logo a{
+  font-size: 24px;  
+  text-decoration: none;
+}
+
+.navbar .menu {
+  display: flex;
+  align-items: center;
+  margin-right: 100px;
+  gap:30px;
+}
+
+.navbar .menu a {
+  /* color: white; */
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.navbar .menu input {
+  padding: 12px;
+  padding-left: 15px;
+  margin-left: 10px;
+  width: 350px;
+  border-radius: 20px;
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.landing-page .saree-collection {
+  margin-top: 40px;
+  margin-left: 60px;
+  margin-bottom: 0px;
+}
+
+.landing-page .saree-collection h1{
+  font-size: 40px;
+}
+
+.main-image img {
+  width: 100%;
+  height: auto;
+}
+
+.sarees-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.saree-main-page-card{
+  display: flex;
+  height: 230px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 1px solid #f0f0f0;
+  margin: 0px 60px;
+  overflow: hidden;
+}
+
+.saree-main-page-card img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.saree-main-page-card .body {
+  padding: 0px 20px 10px 15px;
+  
+  font-family: Roboto, sans-serif;
+  font-weight: 600;
+  position: relative;
+}
+
+.saree-main-page-card .body .title {
+  
+  margin-top: 20px;
+  font-family: Roboto, sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.saree-main-page-card .body .description {
+  
+  margin-top: 10px;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5rem;
+}
+
+.saree-main-page-card .body .view-more {
+  text-decoration: none;
+  font-size: 10px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.saree-main-page-card .body .view-more a {
+  text-decoration: none;
+  color: #333;
+  
+  width: 100px;
+  height: 30px;
+  background-color: antiquewhite;
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+
+
+.sarees-section .card {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.sarees-page {
+  padding: 20px;
+}
+
+.sarees-page .cards {
+  display: flex;
+  justify-content: center;
+}
+
+.sarees-page .card {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.saree-details-page {
+  padding: 20px;
+}
+
+.saree-details-page .cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.saree-details-page .card {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
