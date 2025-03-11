@@ -53,8 +53,8 @@ const ImageGallery = () => {
     
       ))}
 
-      <button className="prev" onClick={prevSlide}>&#10094;</button>
-      <button className="next" onClick={nextSlide}>&#10095;</button>
+      <button className="image-prev" onClick={prevSlide}>&#10094;</button>
+      <button className="image-next" onClick={nextSlide}>&#10095;</button>
     </div>
   );
 };
