@@ -40,6 +40,7 @@ function Navbar() {
 
   return (
     <nav className="navbar">
+      
       <div className="left-section">
       
         <div className="hamburger" onClick={toggleMenu}>
@@ -48,7 +49,9 @@ function Navbar() {
           <span></span>
         </div>
         <div className="logo"><Link to="/">Baasri <span className='lower'>Looms & Weave</span></Link></div>
+       
       </div>
+      <div ></div>
       <div ref={menuRef} className={`menu ${isOpen ? 'active' : ''}`}>
         <div className="logo-menu"><Link to="/" onClick={toggleMenu}>Baasri <span className='lower'>Looms & Weave</span></Link></div>
         <div className="menu-items">

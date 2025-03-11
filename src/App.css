@@ -7,7 +7,7 @@ body, html {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-around; */
   align-items: center;
   padding: 20px 5%;
   background-color: #fff;
@@ -33,7 +33,8 @@ body, html {
 .navbar .menu {
   display: flex;
   align-items: center;
-  gap: 20px;
+  
+  margin-left: 400px;
 }
 
 .navbar .menu a {
@@ -164,7 +165,7 @@ body, html {
 /* Hamburger menu styles */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-around; */
   align-items: center;
   padding: 20px 5%;
   background-color: #fff;
@@ -369,7 +370,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 100px;
+  gap: 70px;
 }
 
 .footer-center a {
@@ -450,7 +451,7 @@ footer {
 /* Floating Contact Button */
 .floating-contact {
   position: fixed;
-  bottom: 20px;
+  bottom: 10px;
   right: 20px;
   z-index: 1000;
   padding: 5px;
@@ -711,6 +712,11 @@ footer {
 
 .footer-left p , .footer-left h2{
   padding-left: 20px;
+  font-size: 12px;
+}
+
+.footer-left h2{
+  font-size: 16px;
 }
 @media (max-width: 480px) {
   .navbar {
@@ -724,6 +730,7 @@ footer {
   .navbar .menu {
       flex-direction: column;
       align-items: center;
+      margin-left: 0px;
   }
 
   .navbar .menu input{
@@ -847,6 +854,15 @@ footer {
     align-items: center;
     text-align: center;
     margin-top: 20px;
+  }
+
+  .footer-right p{
+    font-size: 14px;
+  }
+
+  .footer-right
+  .input-group{    
+    padding: 0px 20px 0px 20px;
   }
 
  
