@@ -38,6 +38,19 @@ function Navbar() {
       }
   }, [hash]); // Run whenever hash changes
 
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1));
+      if (element) {
+        setTimeout(() => { // Delay ensures rendering completes first
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   return (
     <nav className="navbar">
       
@@ -55,9 +68,9 @@ function Navbar() {
       <div ref={menuRef} className={`menu ${isOpen ? 'active' : ''}`}>
         <div className="logo-menu"><Link to="/" onClick={toggleMenu}>Baasri <span className='lower'>Looms & Weave</span></Link></div>
         <div className="menu-items">
-          <Link to="#sarees-collection" onClick={toggleMenu}>Saree Collection</Link>
-          <Link to="#discover" onClick={toggleMenu}>About Baasri</Link>
-          <Link to="#contact-us" onClick={toggleMenu}>Contact Us</Link>
+          <Link to="/#sarees-collection" onClick={toggleMenu}>Saree Collection</Link>
+          <Link to="/#discover" onClick={toggleMenu}>About Baasri</Link>
+          <Link to="/#contact-us" onClick={toggleMenu}>Contact Us</Link>
           <input className="search-input" type="text" placeholder="Search by saree code.." />
         </div>
         

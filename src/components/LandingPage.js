@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import SareeCard from './SareeCard';
 import ImageGallery from './ImageGallery';
-import { NewsLetter } from './NewsLetter';
-import Footer from './Footer';
-import FloatingContact from './FloatingContact';
 
 const slides = [
   {
@@ -37,6 +33,8 @@ function LandingPage() {
 
     return () => clearInterval(interval);
   }, [currentIndex]);
+
+  
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % slides.length);
@@ -99,8 +97,7 @@ function LandingPage() {
 
       {/* <NewsLetter />    */}
 
-      <Footer />
-      <FloatingContact  />
+      
     </div>
   );
 }

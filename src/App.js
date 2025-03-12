@@ -7,6 +7,8 @@ import SareeDetails from './components/SareeDetails';
 import ProductList from './components/Product/ProductList';
 import ProductDetail from './components/Product/ProductDetail';
 import ScrollToTop from './components/ScrollToTop';
+import Footer from './components/Footer';
+import FloatingContact from './components/FloatingContact';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/products" element={<ProductList />} />
         <Route path="/product/:id" element={<ProductDetail />} />
       </Routes>
+      <Footer />
+      <FloatingContact  />
     </Router>
   );
 }

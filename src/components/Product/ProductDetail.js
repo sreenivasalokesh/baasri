@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./Product.css";
 import ImageLightbox from "./ImageLightbox";
+import { MdClose } from "react-icons/md";
+import { RiShareForwardFill } from "react-icons/ri";
 import {
     EmailShareButton,
     FacebookShareButton,
@@ -55,7 +57,22 @@ const ProductDetail = () => {
     const product = productData[id];
     const [selectedImage, setSelectedImage] = useState(product.images[0]);
     const [isOpen, setIsOpen] = useState(false);
+    const [isShareOpen, setIsShareOpen] = useState(false);
+    const [copied, setCopied] = useState(false);
 
+    const handleCopy = () => {
+        navigator.clipboard.writeText(window.location.href)
+          .then(() => {
+            setCopied(true);
+            setTimeout(() => setCopied(false), 10000); // Reset after 2 seconds
+          })
+          .catch(err => console.error("Failed to copy:", err));
+      };
+    
+
+      const shareButtonbgcolor = {
+        backgroundColor : isShareOpen ? "pink" : "#f4f4f4",
+      }
 
     return (
         <div className="product-detail">
@@ -74,7 +91,7 @@ const ProductDetail = () => {
                 </div>
 
                 {/* Right: Large Image Preview */}
-                <div>
+                <div className="product-image">
                     <img src={selectedImage} alt="Selected" className="large-image"
                         onClick={() => setIsOpen(true)}
                         style={{ cursor: "zoom-in" }} />
@@ -84,12 +101,55 @@ const ProductDetail = () => {
                 {isOpen && <ImageLightbox images={imagesTemp} isOpen={isOpen} setIsOpen={setIsOpen} />}
 
                 <div className="product-description">
-                    <p className="title">Green color silk saree with Golden Zari</p>
+                    {isShareOpen && 
+                        <div className="product-share">
+                            <div className="product-share-left">
+                                <div className="share-button">
+                                    <WhatsappShareButton className="share-handle"
+                                        url="https://www.google.com"
+                                        title="Check out this saree on SareeShop">
+                                        <WhatsappIcon  className="share-handle-icon"  round />
+                                    </WhatsappShareButton>
+                                </div>
+                                <div className="share-button">
+                                    <EmailShareButton className="share-handle"
+                                        url="https://www.google.com"
+                                        title="Check out this saree on SareeShop">
+                                        <EmailIcon  className="share-handle-icon"  round />
+                                    </EmailShareButton>
+                                </div>
+                                <div className="share-button">
+                                    <FacebookShareButton className="share-handle"
+                                        url="https://www.google.com"
+                                        title="Check out this saree on SareeShop">
+                                        <FacebookIcon  className="share-handle-icon" round />
+                                    </FacebookShareButton>
+                                </div>
+                                <div className="share-button copy-link" onClick={()=>handleCopy()}>
+                                   {copied ? "Copied!" : "Copy link"} 
+                                </div>
+                            </div>
+                            <div className="product-share-right">
+                                <MdClose 
+                                    class = "cancel-button"
+                                    onClick={()=>setIsShareOpen(!isShareOpen)}/>
+                            </div>
+                        </div>
+                    }
+                    <div className="titleDiv">
+                        <p className="title">Green color silk saree with Golden Zari</p>
+                        <div className="click-share-button" 
+                            style={shareButtonbgcolor}
+                            onClick={()=>setIsShareOpen(!isShareOpen)}
+                            ><RiShareForwardFill/></div>
+                        
+                    </div>
                     
+
                     <hr className="grey-divider"></hr>
                     <p className="sku-code"><span className="bold">SKU: </span><span className="faded-font">BS202503010001</span></p>
                     <p className="sku-code faded-font">A silk saree is a traditional Indian garment made from luxurious silk fabric, known for its rich texture and elegant drape. It is often adorned with intricate weaving, embroidery, or zari work, making it a popular choice for weddings and festive occasions.</p>
-                    
+
                     <hr class="grey-divider"></hr>
                     <p className="h2">Specifications</p>
                     <p className="sku-code"><span className="bold product-description-item-width">Material </span><span class="faded-font tabs-3">Silk</span></p>
@@ -101,17 +161,17 @@ const ProductDetail = () => {
                     <p className="sku-code"><span className="bold product-description-item-width">Saree Colour </span><span class="faded-font tabs-3">Orange</span></p>
                     <p className="sku-code"><span className="bold product-description-item-width" >Blouse Color </span><span class="faded-font tabs-3">Orange</span></p>
                     <hr className="grey-divider"></hr>
-                    
-                    <div className="Demo__container">
-                        
-                    <div className="Demo__some-network">
+
+                    {/* <div className="Demo__container">
+
+                        <div className="Demo__some-network">
                             <WhatsappShareButton className="Demo__some-network__share-button"
                                 url="https://www.google.com"
                                 title="Check out this saree on SareeShop">
                                 <WhatsappIcon size={32} round />
                             </WhatsappShareButton>
                         </div>
-                    <div className="Demo__some-network">
+                        <div className="Demo__some-network">
                             <TelegramShareButton className="Demo__some-network__share-button"
                                 url="https://www.google.com"
                                 title="Check out this saree on SareeShop">
@@ -125,7 +185,7 @@ const ProductDetail = () => {
                                 <FacebookMessengerIcon size={32} round />
                             </FacebookMessengerShareButton>
                         </div>
-                        
+
                         <div className="Demo__some-network">
                             <TwitterShareButton className="Demo__some-network__share-button"
                                 url="https://www.google.com"
@@ -162,14 +222,8 @@ const ProductDetail = () => {
                                 <EmailIcon size={32} round />
                             </EmailShareButton>
                         </div>
-                        
-                        
 
-
-
-                        
-                        
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

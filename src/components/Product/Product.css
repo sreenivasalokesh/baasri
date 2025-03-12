@@ -11,7 +11,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  padding: 40px 10%;
+  padding: 120px 10%;
 }
 
 .product-card {
@@ -31,8 +31,8 @@ body {
 
 .product-image {
   width: 100%;
-  height: auto;
-  max-height: 400px;
+  /* height: 650px; */
+  /* max-height: 400px; */
   object-fit: contain;
   border-radius: 8px;
 }
@@ -50,12 +50,13 @@ body {
 /* Product Detail Page */
 .product-detail {
   background: #f4f4f4;
+  padding: 90px 0px 50px 0px;
 }
 
 .product-detail-container {
   display: flex;
-  flex-direction: column;
-  margin: 40px 5%;
+  flex-direction: row;
+  margin: 20px 5%;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -123,8 +124,8 @@ body {
 .large-image {
   width: 100%;
   max-width: 500px;
-  height: auto;
-  object-fit: cover;
+  height: 100%;
+  object-fit: scale-down;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -135,6 +136,81 @@ body {
   color: blue;
   text-decoration: none;
   font-weight: bold;
+}
+
+.product-share {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 10px;
+  border: 1px solid #333;
+  margin-bottom: 20px;
+}
+
+.product-share-left{
+  display: flex;
+  flex-direction: row;
+  margin-right: 200px;
+}
+
+.product-share-right{
+  margin-right: 10px;
+}
+
+.share-button{
+  margin: 0px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copy-link{
+  font-size: 16px;
+  font-weight: 600;
+  color: pink;
+  word-wrap: none;
+  padding-bottom: 0px;
+}
+
+.copy-link:hover{
+  text-decoration: underline;
+}
+
+.titleDiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.click-share-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-color: #f4f4f4;
+  margin-right: 40px;
+}
+
+.click-share-button:hover{
+  background-color: pink;
+}
+
+.cancel-button{
+  cursor: pointer;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  padding: 10px;
+  background-color: #f4f4f4;
+}
+
+.cancel-button:hover{
+  background-color: pink;
 }
 
 /* Responsive Design */
@@ -168,10 +244,16 @@ body {
   }
 }
 
+.share-handle-icon{
+  height: 30px;
+  width: 30px;
+}
+
 @media (max-width: 480px) {
   .product-grid {
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       padding: 15px;
+      margin-top: 80px;
   }
 
   .product-detail-container {
@@ -186,4 +268,57 @@ body {
   .large-image {
       height: auto;
   }
+
+  .product-image{
+    max-height: 400px;
+    order: 1;
+  }
+
+  .thumbnail-container{
+    flex-direction: row;
+    order: 2;
+  }
+
+  .product-description{
+    order: 3;
+  }
+
+  .share-button{
+    margin: 0px 6px;
+  }
+
+  .product-share{
+    padding: 5px 5px;
+    justify-content: space-between;
+    border-radius: 5px;
+  }
+  .product-share-left{
+    margin-right: 0px;
+  }
+
+  .share-handle{
+    font-size: 10px;
+  }
+
+  .click-share-button{
+    margin-right: 0px;
+    height: 30px;
+    width: 50px;
+  }
+
+  .share-handle-icon{
+    height: 20px;
+    width: 20px;
+  }
+
+  .cancel-button{
+    height: 7px;
+    width: 7px;
+  }
+
+  .copy-link{
+    font-size: 13px;
+    text-decoration: underline;
+  }
 }
+
