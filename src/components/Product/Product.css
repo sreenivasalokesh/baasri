@@ -35,6 +35,8 @@ body {
   /* max-height: 400px; */
   object-fit: contain;
   border-radius: 8px;
+  position: relative;
+  display: inline-block;
 }
 
 .product-name {
@@ -322,3 +324,21 @@ body {
   }
 }
 
+
+
+.icon-overlay {
+  position: absolute;
+  top: 15px;   /* Adjust position */
+  left: 10px; /* Adjust position */
+  font-size: 14px; /* Size of the icon */
+  color: white; /* Icon color */
+  background: rgba(0, 0, 0, 0.6); /* Optional background */
+  padding: 5px;
+  border-radius: 50%; /* Makes the icon circular */
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.icon-overlay:hover {
+  background: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}

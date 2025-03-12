@@ -4,6 +4,7 @@ import "./Product.css";
 import ImageLightbox from "./ImageLightbox";
 import { MdClose } from "react-icons/md";
 import { RiShareForwardFill } from "react-icons/ri";
+import { GoZoomIn } from "react-icons/go";
 import {
     EmailShareButton,
     FacebookShareButton,
@@ -95,6 +96,7 @@ const ProductDetail = () => {
                     <img src={selectedImage} alt="Selected" className="large-image"
                         onClick={() => setIsOpen(true)}
                         style={{ cursor: "zoom-in" }} />
+                    <GoZoomIn className="icon-overlay" onClick={() => setIsOpen(true)}/>
 
                 </div>
 
