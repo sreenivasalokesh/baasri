@@ -40,6 +40,8 @@ const imagesTemp = [
     { src: "/silk/87654322/pallu.jpg" },
     { src: "/silk/87654322/3.jpg" },
     { src: "/silk/87654322/4.jpg" },
+    { src: "/silk/87654322/5.jpg"},
+    
 ];
 
 
@@ -47,6 +49,7 @@ const ProductDetail = () => {
     const { id } = useParams();
     const product = productData[id];
     const [selectedImage, setSelectedImage] = useState(product.images[0]);
+    const [index, setIndex] = useState(0);
     const [isOpen, setIsOpen] = useState(false);
     const [isShareOpen, setIsShareOpen] = useState(false);
     const [copied, setCopied] = useState(false);
@@ -76,7 +79,7 @@ const ProductDetail = () => {
                             src={img}
                             alt={`Thumbnail ${index}`}
                             className={`thumbnail ${selectedImage === img ? "selected" : ""}`}
-                            onClick={() => setSelectedImage(img)}
+                            onClick={() => {setSelectedImage(img); setIndex(index);}}
                         />
                     ))}
                 </div>
@@ -90,7 +93,7 @@ const ProductDetail = () => {
 
                 </div>
 
-                {isOpen && <ImageLightbox images={imagesTemp} isOpen={isOpen} setIsOpen={setIsOpen} />}
+                {isOpen && <ImageLightbox images={imagesTemp} isOpen={isOpen} setIsOpen={setIsOpen} index={index}/>}
 
                 <div className="product-description">
                     {isShareOpen && 

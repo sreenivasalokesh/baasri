@@ -14,7 +14,7 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 //       "/silk/87654322/5.jpg", 
 
 
-export default function ImageLightbox({isOpen, setIsOpen, images}) {
+export default function ImageLightbox({isOpen, setIsOpen, images, index}) {
    
   return (
     <>
@@ -23,6 +23,7 @@ export default function ImageLightbox({isOpen, setIsOpen, images}) {
         close={() => setIsOpen(false)}
         slides={images}
         plugins={[Captions, Fullscreen, Slideshow, Thumbnails, Video, Zoom]}
+        index={index}
         
       />
     </>
