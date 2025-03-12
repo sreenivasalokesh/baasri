@@ -9,6 +9,7 @@ import ProductDetail from './components/Product/ProductDetail';
 import ScrollToTop from './components/ScrollToTop';
 import Footer from './components/Footer';
 import FloatingContact from './components/FloatingContact';
+import AboutPage from './components/about/about';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/sarees/:type" element={<SareeDetails />} />
         <Route path="/products" element={<ProductList />} />
         <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
       <Footer />
       <FloatingContact  />

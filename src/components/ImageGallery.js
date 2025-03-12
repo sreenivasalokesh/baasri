@@ -1,25 +1,31 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const galley = [
     {
         image: "/gallery/vision.jpg",
         title: "Our goal",
+        destination: "goal"
     },
     {
         image: "/gallery/about-1.jpg",
         title: "About us",
+        destination: "about"
     },
     {
         image: "/gallery/services-1.jpg",
         title: "Our services",
+        destination: "services"
     },
     {
         image: "/gallery/about-2.jpg",
         title: "Testimonials",
+        destination: "testimonials"
     }
 ];
 
 const ImageGallery = () => {
+  const navigate = useNavigate();
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const nextSlide = () => {
@@ -45,6 +51,7 @@ const ImageGallery = () => {
           onMouseEnter={() => setHoveredIndex(index)}
           onMouseLeave={() => setHoveredIndex(null)}
           style={{ backgroundImage: `url(${src.image})` }}
+          onClick={()=>navigate("/about/#"+src.destination)}
         >
             <div className="caption">{src.title}</div>
 

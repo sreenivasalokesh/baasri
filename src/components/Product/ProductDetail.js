@@ -8,20 +8,10 @@ import { GoZoomIn } from "react-icons/go";
 import {
     EmailShareButton,
     FacebookShareButton,
-    FacebookMessengerShareButton,
-    LinkedinShareButton,
-    PinterestShareButton,
-    TelegramShareButton,
-    TwitterShareButton,
     WhatsappShareButton,
     EmailIcon,
-    FacebookIcon,
-    FacebookMessengerIcon,
-    TwitterIcon,
-    LinkedinIcon,
-    PinterestIcon,
+    FacebookIcon,    
     WhatsappIcon,
-    TelegramIcon,
 
 } from "react-share";
 
