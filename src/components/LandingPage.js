@@ -19,7 +19,7 @@ const slides = [
     image: "carousal/we-1.jpg",
     title: "Our Craft",
     description: "Quality, creativity, and perfection in weaving.",
-    link: "/page3",
+    link: "/about/#services",
   },
 ];
 
