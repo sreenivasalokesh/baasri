@@ -11,20 +11,22 @@ import Footer from './components/Footer';
 import FloatingContact from './components/FloatingContact';
 import AboutPage from './components/about/about';
 import { SareeDataProvider } from './components/provider/SareeDataContext';
+import Breadcrumbs from './Breadcrumb';
 
 function App() {
   return (
     <SareeDataProvider>
       <Router>
-
+      {/* <Breadcrumbs /> */}
         <Navbar />
         <ScrollToTop />
+        
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/sarees" element={<Sarees />} />
           <Route path="/sarees/:type" element={<SareeDetails />} />
           <Route path="/products" element={<ProductList />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/products/:id" element={<ProductDetail />} />
           <Route path="/about" element={<AboutPage />} />
         </Routes>
         <Footer />

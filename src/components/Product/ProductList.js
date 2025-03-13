@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import "./Product.css";
 import Papa from "papaparse";
@@ -45,8 +45,10 @@ const ProductList = () => {
                   let sareesTemp = [];
                   if(category){
                     sareesTemp = processedData.filter((product) => product.category == category);
-                  }else{
+                  }else if(label){
                     sareesTemp = processedData.filter((product) => product.labels.includes(label));
+                  }else{
+                    sareesTemp = processedData.filter((product) => product.category == 'art-silk');
                   }
                   
                   setSarees(sareesTemp);                 
@@ -57,16 +59,13 @@ const ProductList = () => {
           };
       
           fetchSarees();
-        }, [])
+        })
 
-  console.log("sarees: "+sarees);
-  console.log("cat: "+category);
-  console.log("label: "+label);
-
+ 
   return (
     <div className="product-grid">
       {sarees.map((saree) => (
-        <Link key={saree.id} to={`/product/${saree.sku}`} className="product-card">
+        <Link key={saree.id} to={`/products/${saree.sku}`} className="product-card">
           <img src={"/sarees/"+saree.sku+"/"+saree.images[0]} alt={saree.title} className="product-image" />
           <h2 className="product-name">{saree.title}</h2>
           <p className="product-code">Code: {saree.sku}</p>
