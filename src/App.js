@@ -10,24 +10,27 @@ import ScrollToTop from './components/ScrollToTop';
 import Footer from './components/Footer';
 import FloatingContact from './components/FloatingContact';
 import AboutPage from './components/about/about';
+import { SareeDataProvider } from './components/provider/SareeDataContext';
 
 function App() {
   return (
-    <Router>
-      
-      <Navbar />
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/sarees" element={<Sarees />} />
-        <Route path="/sarees/:type" element={<SareeDetails />} />
-        <Route path="/products" element={<ProductList />} />
-        <Route path="/product/:id" element={<ProductDetail />} />
-        <Route path="/about" element={<AboutPage />} />
-      </Routes>
-      <Footer />
-      <FloatingContact  />
-    </Router>
+    <SareeDataProvider>
+      <Router>
+
+        <Navbar />
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/sarees" element={<Sarees />} />
+          <Route path="/sarees/:type" element={<SareeDetails />} />
+          <Route path="/products" element={<ProductList />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
+        <Footer />
+        <FloatingContact />
+      </Router>
+    </SareeDataProvider>
   );
 }
 

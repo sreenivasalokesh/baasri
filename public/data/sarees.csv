@@ -1,0 +1,71 @@
+id,title,sku,category,description,details,labels,images
+1,Yellow Blended Art Silk Saree,BS25031001,art-silk,Yellow Blended Art Silk Saree with Zari Brocade on the body and Zari Border. Includes unstitched blouse.,"{
+	'Material': 'Silk',
+	'Weight': '700 gm',
+	'Saree Size': '5.5 x 1.1 mts',
+	'Blouse Size': '0.8 x 1.1 mtr',
+	'Border':  'Zari Border',
+	'Zari Type': 'Half-Fine Zari',
+	'Saree Colour': 'Yellow',
+	'Blouse': 'Contrast'
+}","latest, heritage, exclusive","01.jpg, 02.jpg, 03.jpg, 04.jpg"
+2,Rose pink Blended Art Silk Saree,BS25031002,art-silk,Rose pink Blended Art Silk Saree with Plain Body and Zari Border. Includes unstitched blouse.,"{
+	'Material': 'Silk',
+	'Weight': '700 gm',
+	'Saree Size': '5.5 x 1.1 mts',
+	'Blouse Size': '0.8 x 1.1 mtr',
+	'Border':  'Zari Border',
+	'Zari Type': 'Half-Fine Zari',
+	'Saree Colour': 'Rose Pink',
+	'Blouse': 'Contrast'
+}","latest, exlusive","01.jpg, 02.jpg, 03.jpg, 04.jpg"
+3,Mustard Blended Art Silk Saree,BS25031003,art-silk,Mustard Blended Art Silk Saree with Stripes on the body and Zari Border. Includes unstitched blouse.,"{
+	'Material': 'Silk',
+	'Weight': '700 gm',
+	'Saree Size': '5.5 x 1.1 mts',
+	'Blouse Size': '0.8 x 1.1 mtr',
+	'Border':  'Zari Border',
+	'Zari Type': 'Half-Fine Zari',
+	'Saree Colour': 'Mustard',
+	'Blouse': 'Contrast'
+}","latest, exlusive","01.jpg, 02.jpg, 03.jpg, 04.jpg"
+4,Beige Blended Art Silk Saree,BS25031004,art-silk,Beige Blended Art Silk SareeChecked design on the body and Zari Border. Includes unstitched blouse.,"{
+	'Material': 'Silk',
+	'Weight': '700 gm',
+	'Saree Size': '5.5 x 1.1 mts',
+	'Blouse Size': '0.8 x 1.1 mtr',
+	'Border':  'Zari Border',
+	'Zari Type': 'Half-Fine Zari',
+	'Saree Colour': 'Beige',
+	'Blouse': 'Contrast'
+}","latest, exlusive","01.jpg, 02.jpg, 03.jpg, 04.jpg"
+5,Pink Blended Art Silk Saree,BS25031005,art-silk,Pink Blended Art Silk Saree with Zari Butta on the body and Zari Border. Includes unstitched blouse.,"{
+	'Material': 'Silk',
+	'Weight': '700 gm',
+	'Saree Size': '5.5 x 1.1 mts',
+	'Blouse Size': '0.8 x 1.1 mtr',
+	'Border':  'Zari Border',
+	'Zari Type': 'Half-Fine Zari',
+	'Saree Colour': 'Pink',
+	'Blouse': 'Contrast'
+}","latest, exlusive","01.jpg, 02.jpg, 03.jpg, 04.jpg"
+6,Pure Silk Pure Zari Green Dual Tone Kanchipuram Saree,BS25032001,silk,Pure Silk Pure Zari Green Dual Tone Kanchipuram SareeChecked design on the body and Zari Border. Includes unstitched blouse.,"{
+	'Material': 'Silk',
+	'Weight': '700 gm',
+	'Saree Size': '5.5 x 1.1 mts',
+	'Blouse Size': '0.8 x 1.1 mtr',
+	'Border':  'Zari Border',
+	'Zari Type': 'Half-Fine Zari',
+	'Saree Colour': 'Green',
+	'Blouse': 'Contrast'
+}",heritage,"01.jpg, 02.jpg, 03.jpg, 04.jpg, 05.jpg"
+7,Green Kanchipuram Silk Saree,BS25032002,,Green Kanchipuram Silk Saree with Zari Brocade on the body and Zari Border. Includes unstitched blouse.,"{
+	'Material': 'Silk',
+	'Weight': '700 gm',
+	'Saree Size': '5.5 x 1.1 mts',
+	'Blouse Size': '0.8 x 1.1 mtr',
+	'Border':  'Zari Border',
+	'Zari Type': 'Half-Fine Zari',
+	'Saree Colour': 'Green',
+	'Blouse': 'Contrast'
+}",latest,"01.jpg, 02.jpg, 03.jpg, 04.jpg, 05.jpg"

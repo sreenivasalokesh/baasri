@@ -36,17 +36,30 @@ body {
   object-fit: contain;
   border-radius: 8px;
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+}
+
+.product-detail-image{
+  width: 50%;
+  /* height: 650px; */
+  /* max-height: 400px; */
+  object-fit: contain;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .product-name {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 20px 0px 10px 0px
 }
 
 .product-code {
   color: gray;
+  font-size: 14px;
 }
 
 /* Product Detail Page */
@@ -251,6 +264,25 @@ body {
   width: 30px;
 }
 
+
+
+.icon-overlay {
+  position: absolute;
+  top: 15px;   /* Adjust position */
+  left: 70px; /* Adjust position */
+  font-size: 14px; /* Size of the icon */
+  color: white; /* Icon color */
+  background: rgba(0, 0, 0, 0.6); /* Optional background */
+  padding: 5px;
+  border-radius: 50%; /* Makes the icon circular */
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.icon-overlay:hover {
+  background: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
 @media (max-width: 480px) {
   .product-grid {
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -274,6 +306,13 @@ body {
   .product-image{
     max-height: 520px;
     order: 1;
+    width: 100%;
+  }
+
+  .product-detail-image{
+    max-height: 520px;
+    order: 1;
+    width: 100%;
   }
 
   .thumbnail-container{
@@ -322,23 +361,17 @@ body {
     font-size: 13px;
     text-decoration: underline;
   }
+
+  .icon-overlay {
+    left: 15px; 
+  }
+
+  .product-description-item-width{
+    max-width: 100px;
+  }
+
+  .product-code {
+    font-size: 12px;
+  }
 }
 
-
-
-.icon-overlay {
-  position: absolute;
-  top: 15px;   /* Adjust position */
-  left: 10px; /* Adjust position */
-  font-size: 14px; /* Size of the icon */
-  color: white; /* Icon color */
-  background: rgba(0, 0, 0, 0.6); /* Optional background */
-  padding: 5px;
-  border-radius: 50%; /* Makes the icon circular */
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.icon-overlay:hover {
-  background: rgba(0, 0, 0, 0.8); /* Darker background on hover */
-}

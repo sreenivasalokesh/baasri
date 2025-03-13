@@ -22,7 +22,7 @@ function Navbar() {
     };
   }, []);
 
-  const { hash, pathname } = useLocation(); // Get the hash from the URL
+  const { hash } = useLocation(); // Get the hash from the URL
 
   useEffect(() => {
     // Scroll to top when route changes
