@@ -29,7 +29,7 @@ function LandingPage() {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 5000); // 2-second auto-slide
+    }, 3000); // 2-second auto-slide
 
     return () => clearInterval(interval);
   }, [currentIndex]);
