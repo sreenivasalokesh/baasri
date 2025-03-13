@@ -1,12 +1,67 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import "./Product.css";
-import { SareeDataContext } from "../provider/SareeDataContext";
+import Papa from "papaparse";
+
+const parseDetails = (detailsStr) => {
+  try {
+    return JSON.parse(detailsStr.replace(/'/g, '"')); // Fix single quotes
+  } catch (error) {
+    console.error("Error parsing details:", detailsStr, error);
+    return {};
+  }
+};
 
 const ProductList = () => {
-  const { sarees } = useContext(SareeDataContext);
+  const [searchParams] = useSearchParams();
+  const category = searchParams.get("category");
+  const label = searchParams.get("label");
 
-  console.log("sa: "+JSON.stringify(sarees));
+  const [sarees, setSarees] = useState([]);
+        useEffect(() => {
+          const fetchSarees = async () => {
+            try {
+              const response = await fetch("/data/sarees.csv"); // Ensure correct path
+              const csvText = await response.text();
+      
+              const result = await new Promise((resolve) => {
+                Papa.parse(csvText, {
+                  header: true,
+                  skipEmptyLines: true,
+                  complete: resolve,
+                });
+              });
+      
+              const processedData = result.data.map((row) => ({
+                ...row,
+                labels: row.labels ? row.labels.split(",").map((l) => l.trim()) : [],
+                images: row.images ? row.images.split(",").map((img) => img.trim()) : [],
+                details: row.details ? parseDetails(row.details) : {},
+              }));
+      
+              
+  
+              if(processedData){
+                  let sareesTemp = [];
+                  if(category){
+                    sareesTemp = processedData.filter((product) => product.category == category);
+                  }else{
+                    sareesTemp = processedData.filter((product) => product.labels.includes(label));
+                  }
+                  
+                  setSarees(sareesTemp);                 
+              }
+            } catch (error) {
+              console.error("Error fetching sarees:", error);
+            }
+          };
+      
+          fetchSarees();
+        }, [])
+
+  console.log("sarees: "+sarees);
+  console.log("cat: "+category);
+  console.log("label: "+label);
 
   return (
     <div className="product-grid">

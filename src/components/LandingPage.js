@@ -7,13 +7,13 @@ const slides = [
     image: "carousal/latest-saree-collection-2.jpg",
     title: "Latest Trending",
     description: "Fresh designs, modern elegance for every occasion.",
-    link: "/page1",
+    link: "/products?label=latest",
   },
   {
     image: "carousal/heritage-saree-colleciton.jpg",
     title: "Timeless Weaves",
     description: "Fresh designs, modern elegance for every occasion.",
-    link: "/page2",
+    link: "/products?label=heritage",
   },
   {
     image: "carousal/we-1.jpg",
@@ -61,7 +61,7 @@ function LandingPage() {
             <h2>{slides[currentIndex].title}</h2>
             <p>{slides[currentIndex].description}</p>
             <hr className="grey-divider"></hr>
-            <a href={slides[currentIndex].link} className="explore">Know more</a>
+            <a href={slides[currentIndex].link} className="explore">View more</a>
           </div>
         </div>
 
@@ -82,11 +82,11 @@ function LandingPage() {
           <SareeCard imageName="silk-saree-card-1.png"
             title="Silk Collection"
             description="This category features sarees meticulously crafted using premium silk fabric and intricately woven zari work, showcasing elegance, tradition, and fine craftsmanship."
-            target="/products" />
+            target="/products?category=silk" />
           <SareeCard imageName="art-silk-saree-card-1.png"
             title="Art Silk Collection"
             description="This category features sarees crafted from high-quality art silk fabrics, such as Chiffon, Georgette, Crepe, Brasso, and Satin, adorned with intricate zari work. These sarees offer a perfect blend of elegance, affordability, and refined craftsmanship."
-            target="/sarees" />
+            target="/products?category=art-silk" />
 
         </div>
       </div>
