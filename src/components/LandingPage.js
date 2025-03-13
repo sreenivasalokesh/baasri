@@ -91,7 +91,7 @@ function LandingPage() {
         </div>
       </div>
       <div  id="discover" className="sarees-section-container" >
-      <div className='saree-collection'> <p>Discover Baasri</p>  </div>
+      <div className='saree-collection'> <p>Discover Bhasri</p>  </div>
       </div>
       <ImageGallery />
 
