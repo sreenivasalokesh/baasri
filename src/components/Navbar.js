@@ -61,12 +61,12 @@ function Navbar() {
           <span></span>
           <span></span>
         </div>
-        <div className="logo"><Link to="/">Bhasri <span className='lower'>Looms & Weave</span></Link></div>
+        <div className="logo"><Link to="/">Bhaskara <span className='lower'>Silks</span></Link></div>
        
       </div>
       <div ></div>
       <div ref={menuRef} className={`menu ${isOpen ? 'active' : ''}`}>
-        <div className="logo-menu"><Link to="/" onClick={toggleMenu}>Bhasri <span className='lower'>Looms & Weave</span></Link></div>
+        <div className="logo-menu"><Link to="/" onClick={toggleMenu}>Bhaskara <span className='lower'>Silks</span></Link></div>
         <div className="menu-items">
           <Link to="/#sarees-collection" onClick={toggleMenu}>Saree Collection</Link>
           <Link to="/#discover" onClick={toggleMenu}>About Bhasri</Link>
