@@ -9,10 +9,10 @@ const Footer = () => {
     <footer id ="contact-us" className="footer">
       <div className="footer-content">
         <div className="footer-left">
-          <h2>Baasri</h2>
+          <h2>Bhaskara Silks</h2>
           <p><span className="footer-left-item">GST</span> 1234ABC87820UH1</p>
           <p><span className="footer-left-item"><FaPhone /></span> +123 456 7890</p>
-          <p><span className="footer-left-item"><MdOutlineEmail /></span><a href="mailto:abc.com"></a>contactus@baasri.com</p>
+          <p><span className="footer-left-item"><MdOutlineEmail /></span><a href="mailto:abc.com"></a>contactus@bhaskarasilks.com</p>
           <p><span className="footer-left-item"><FaMapLocationDot /></span>Bengaluru Rural</p>
         </div>
         <div className="footer-center">
@@ -23,7 +23,7 @@ const Footer = () => {
 
           </div>
           <div className="footer-center-bottom">
-            <p>&copy; Copyright 2025 Baasri All rights reserved.</p>
+            <p>&copy; Copyright 2025. Bhaskara Silks. All rights reserved.</p>
           </div>
         </div>
         <div className="footer-right">
