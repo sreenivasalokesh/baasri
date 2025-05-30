@@ -35,7 +35,7 @@ const FloatingContact = () => {
             <FaPhone /> Call Us +123 456 7890
           </a>
           <a href="mailto:example@email.com" className="contact-option">
-            <FaEnvelope /> Write to us hello@baasri.com
+            <FaEnvelope /> Write to us hello@bhaskarasilks.com
           </a>
           <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="contact-option">
             <FaWhatsapp /> WhatsApp us +123 456 7890
